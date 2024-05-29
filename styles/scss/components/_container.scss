@@ -1,0 +1,12 @@
+.container__carousel {
+    position: relative;
+    width: $container-width;
+    min-height: $container-height;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+
+    overflow: hidden;
+}

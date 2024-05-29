@@ -1,0 +1,9 @@
+@use "media";
+@import "variables";
+@import "global";
+
+// component
+@import "components/container";
+@import "components/slide-slider";
+@import "components/dots";
+@import "components/arrows";

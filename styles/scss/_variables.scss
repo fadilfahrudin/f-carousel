@@ -1,0 +1,21 @@
+// ========= Container ===========
+$container-width: 100%;
+$container-height: 600px;
+$container-padding: 15px;
+// ========= Container ===========
+
+// ========= Colors ===========
+// Dark
+$primary-color-dark: #151515;
+$secondary-color-dark: #222831;
+$tertiary-color-dark: #31363f;
+
+// Light
+$primary-color-light: #fff;
+$secondary-color-light: #eeeeee;
+$tertiary-color-light: #e2dfd0;
+
+$primary-color: $primary-color-dark;
+$secondary-color: $tertiary-color-dark;
+$tertiary-color: $secondary-color-light;
+// ========= Colors ===========
