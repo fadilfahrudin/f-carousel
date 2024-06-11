@@ -42,7 +42,6 @@ button {
   min-height: 70vh;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  transition: transform 0.3s ease-in-out;
 }
 #slider__carousel .slide__carousel {
   width: 100%;
