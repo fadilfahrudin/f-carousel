@@ -1,9 +1,3 @@
-// ========= Container ===========
-$container-width: 100%;
-$container-height: 600px;
-$container-padding: 15px;
-// ========= Container ===========
-
 // ========= Colors ===========
 // Dark
 $primary-color-dark: #151515;
@@ -18,4 +12,44 @@ $tertiary-color-light: #e2dfd0;
 $primary-color: $primary-color-dark;
 $secondary-color: $tertiary-color-dark;
 $tertiary-color: $secondary-color-light;
+
+$transparent-color: transparent;
 // ========= Colors ===========
+
+// ========= Container ===========
+$container-width: 100%;
+$container-height: 300px;
+// ========= Container ===========
+
+// ========= slider__carousel ===========
+$slider-width: 100%;
+$slider-height: 100%;
+// ========= End slider__carousel ===========
+
+// ========= slide__carousel ===========
+$slide-width: 100%;
+$slide-height: 100%;
+$slide-bg-color: $tertiary-color-light;
+$slide-text-color: $secondary-color-dark;
+// ========= End slider__carousel===========
+
+// ========= DOTS ============
+$dot-width: 12px;
+$dot-height: 12px;
+$dot-border: 1px solid $tertiary-color;
+$dot-border-radius: 50%;
+$dots-gap: 10px;
+
+$dot-active-color: $tertiary-color;
+$dot-hover-color: $tertiary-color-light;
+// ========= End DOTS ============
+
+// ========= Arrows / Navigation ============
+$arrow-width: 40px;
+$arrow-height: 40px;
+$arrow-border-radius: 50%;
+$arrow-border: unset;
+$arrow-hover-color: $secondary-color;
+$arrow-icon: url("../../icon/ic-arrow.png");
+$arrow-icon-hover: url("../../icon/ic-arrow-active.png");
+// ========= End Arrows / Navigation ============

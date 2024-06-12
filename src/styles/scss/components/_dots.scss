@@ -4,17 +4,17 @@
     align-items: center;
     gap: 10px;
     .dot__carousel {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 1px solid $tertiary-color;
+        width: $dot-width;
+        height: $dot-height;
+        border-radius: $dot-border-radius;
+        border: $dot-border;
 
         &:hover {
-            background-color: $tertiary-color;
+            background-color: $dot-hover-color;
         }
 
         &.active {
-            background-color: $tertiary-color;
+            background-color: $dot-active-color;
         }
     }
 }

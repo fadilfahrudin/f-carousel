@@ -7,16 +7,34 @@
     align-items: center;
     padding: 0 15px;
     .arrow__carousel {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid $tertiary-color;
+        width: $arrow-width;
+        height: $arrow-height;
+        border-radius: $arrow-border-radius;
+        border: $arrow-border;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        &:first-child::after {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+        &::after {
+            content: "";
+            background-image: $arrow-icon;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+        }
         &:hover {
-            background-color: $tertiary-color;
+            background-color: $arrow-hover-color;
+            &::after {
+                background-image: $arrow-icon-hover;
+            }
         }
     }
 }

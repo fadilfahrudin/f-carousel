@@ -1,16 +1,19 @@
 #slider__carousel {
     display: flex;
-    width: 100%;
-    min-height: 70vh;
+    width: $slider-width;
+    height: $slider-height;
     scrollbar-width: none;
     scroll-behavior: smooth;
-
-    // transition: transform 0.3s ease-in-out;
     .slide__carousel {
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-shrink: 0;
         padding: 0 15px;
-        height: 500px;
+        color: $slide-text-color;
+        width: $slide-width;
+        height: $slide-height;
+        background-color: $slide-bg-color;
 
         img {
             width: 100%;
