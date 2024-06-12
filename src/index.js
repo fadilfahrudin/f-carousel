@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideDuration = slider.attr('data-duration');
 
     slider.css('transform', `translateX(-100%)`);
-    slideShow.setIndex(1);
 
     if (dataDots && dataDots === 'true') {
         let dots = [];

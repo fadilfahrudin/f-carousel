@@ -81,7 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 let sliderElement = document.querySelector("#slider__carousel")
 let slide = document.querySelectorAll(".slide__carousel")
-let index = 0
+let index = 1
 
 const slideShowObject = {
     move: (i, transition = true) => {
@@ -97,9 +97,6 @@ const slideShowObject = {
     getIndex: () => {
         return index
     },
-    setIndex: (i) => {
-        index = i
-    }
 }
 
 const slideShow = Object.freeze(slideShowObject)
@@ -286,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideDuration = slider.attr('data-duration');
 
     slider.css('transform', `translateX(-100%)`);
-    _modules_slide_carousel_js__WEBPACK_IMPORTED_MODULE_2__["default"].setIndex(1);
 
     if (dataDots && dataDots === 'true') {
         let dots = [];

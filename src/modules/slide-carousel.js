@@ -1,6 +1,6 @@
 let sliderElement = document.querySelector("#slider__carousel")
 let slide = document.querySelectorAll(".slide__carousel")
-let index = 0
+let index = 1
 
 const slideShowObject = {
     move: (i, transition = true) => {
@@ -16,9 +16,6 @@ const slideShowObject = {
     getIndex: () => {
         return index
     },
-    setIndex: (i) => {
-        index = i
-    }
 }
 
 const slideShow = Object.freeze(slideShowObject)
