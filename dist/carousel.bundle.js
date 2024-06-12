@@ -302,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (dataArrows && dataArrows === 'true') {
         containerCarpusel.append(`
             <div class="arrows__carousel">
-                <button id="prev__carousel" class="arrow__carousel">←</button>
-                <button id="next__carousel" class="arrow__carousel">→</button>
+                <button id="prev__carousel" class="arrow__carousel"></button>
+                <button id="next__carousel" class="arrow__carousel"></button>
             </div>
         `);
     }
