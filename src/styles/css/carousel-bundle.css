@@ -56,8 +56,10 @@ button {
 #slider__carousel .slide__carousel img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 .dots__carousel {
