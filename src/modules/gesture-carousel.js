@@ -5,6 +5,15 @@ function isTouchDevice() {
     return ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
 }
 
+const slider3dShow = (i) => {
+    $('.slide__3d').eq(i).css({
+        'transform': 'scale(1)',
+        'z-index': 1,
+        'transition': 'transform 0.5s ease-in-out',
+        'box-shadow': 'none'
+    })
+}
+
 function handleGesture(e) {
     if (currentX - startX > 250) {
         action.prevSlide();
@@ -33,6 +42,10 @@ const gestureSlider = () => {
                 newX = e.touches[0].clientX - offsetX;
                 currentX = e.touches[0].pageX;
 
+                if ($('.slider__3d').length > 0) {
+                    slider3dShow(i)
+                }
+
                 $('#slider__carousel').css('transition', `transform 0s ease-in-out`)
                 $('#slider__carousel').css('transform', `translateX(${newX}px)`)
             })
@@ -54,6 +67,10 @@ const gestureSlider = () => {
                 if (!isDragging) return;
                 newX = e.clientX - offsetX;
                 currentX = e.pageX;
+
+                if ($('.slider__3d').length > 0) {
+                    slider3dShow(i)
+                }
 
                 $('#slider__carousel').css('transition', `transform 0s ease-in-out`)
                 $('#slider__carousel').css('transform', `translateX(${newX}px)`)

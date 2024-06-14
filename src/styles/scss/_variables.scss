@@ -18,12 +18,12 @@ $transparent-color: transparent;
 
 // ========= Container ===========
 $container-width: 100%;
-$container-height: 300px;
+$container-height: 100vh;
 // ========= Container ===========
 
 // ========= slider__carousel ===========
 $slider-width: 100%;
-$slider-height: 100%;
+$slider-height: 300px;
 // ========= End slider__carousel ===========
 
 // ========= slide__carousel ===========
@@ -31,6 +31,7 @@ $slide-width: 100%;
 $slide-height: 100%;
 $slide-bg-color: $tertiary-color-light;
 $slide-text-color: $secondary-color-dark;
+$slide-padding: 0 0;
 // ========= End slider__carousel===========
 
 // ========= DOTS ============

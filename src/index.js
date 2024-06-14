@@ -10,8 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let dataArrows = slider.attr('data-arrows');
     let slideAuto = slider.attr('data-slide-auto');
     let slideDuration = slider.attr('data-duration');
+    let slide3DFeature = slider.attr('data-3d');
 
-    slider.css('transform', `translateX(-100%)`);
+    // 3d slider feature
+    if (slide3DFeature && slide3DFeature === 'true') {
+        slider.addClass('slider__3d')
+        slide.each((i, el) => {
+            $(el).addClass('slide__3d')
+            slideShow.setWidth($(el).css('width').replace('px', ''))
+        })
+        slider.append(slide[2].cloneNode(true));
+        slider.prepend(slide[slide.length - 3].cloneNode(true));
+        slide.eq(slideShow.getIndex()).css({
+            'transform': 'scale(1.3)',
+            'z-index': 2,
+            'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        })
+    }
 
     if (dataDots && dataDots === 'true') {
         let dots = [];
@@ -37,14 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         `);
     }
 
-    gestureSlider();
+    if ($('.container__carousel').length > 0) {
+        gestureSlider();
+    }
 
     if (slideAuto && slideAuto === 'true') {
         setInterval(() => {
             action.nextSlide();
         }, slideDuration | 3000)
     }
-
 
     // click slide
     $("#next__carousel").click(() => {

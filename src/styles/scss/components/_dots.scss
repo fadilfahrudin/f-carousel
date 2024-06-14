@@ -8,6 +8,8 @@
         height: $dot-height;
         border-radius: $dot-border-radius;
         border: $dot-border;
+        position: relative;
+        bottom: -50px;
 
         &:hover {
             background-color: $dot-hover-color;

@@ -4,16 +4,25 @@
     height: $slider-height;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    transform: translateX(-100%);
+    &.slider__3d {
+        transform: translateX(calc(-100% / 3));
+    }
     .slide__carousel {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        padding: 0 15px;
+        padding: $slide-padding;
         color: $slide-text-color;
         width: $slide-width;
         height: $slide-height;
         background-color: $slide-bg-color;
+
+        &.slide__3d {
+            position: relative;
+            width: calc(100% / 3);
+        }
 
         img {
             width: 100%;

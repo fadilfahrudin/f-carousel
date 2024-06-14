@@ -6,6 +6,8 @@ let isTransitioning = false;
 slider.append(slide[0].cloneNode(true));
 slider.prepend(slide[slide.length - 1].cloneNode(true));
 
+
+
 const actionObject = {
     nextSlide: () => {
         if (isTransitioning) return;
