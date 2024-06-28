@@ -14,18 +14,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3d slider feature
     if (slide3DFeature && slide3DFeature === 'true') {
+        slideShow.setIndex(1)
         slider.addClass('slider__3d')
         slide.each((i, el) => {
             $(el).addClass('slide__3d')
             slideShow.setWidth($(el).css('width').replace('px', ''))
         })
         slider.append(slide[2].cloneNode(true));
+        slider.append(slide[3].cloneNode(true));
         slider.prepend(slide[slide.length - 3].cloneNode(true));
+        slider.prepend(slide[slide.length - 4].cloneNode(true));
+        // slide.css({
+        //     'transform': 'scale(1) translateX(100%)',
+        //     'z-index': 0,
+        //     'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        // })
         slide.eq(slideShow.getIndex()).css({
             'transform': 'scale(1.3)',
             'z-index': 2,
             'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
         })
+        slide.eq(slideShow.getIndex() + 1).css({
+            'transform': 'scale(1.2) translateX(-20%)',
+            'z-index': 1,
+            'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        })
+        slide.eq(slideShow.getIndex() - 1).css({
+            'transform': 'scale(1.2) translateX(20%)',
+            'z-index': 1,
+            'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        })
+        slide.eq(slideShow.getIndex() + 2).css({
+            'transform': 'scale(1) translateX(-100%)',
+            'z-index': 0,
+            'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        })
+        $('.slide__carousel').eq(1).css({
+            'transform': 'scale(1) translateX(100%)',
+            'z-index': 0,
+            'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
+        })
+
+        slideShow.setSlide($(".slide__carousel"))
     }
 
     if (dataDots && dataDots === 'true') {

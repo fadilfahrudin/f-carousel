@@ -26,13 +26,14 @@ button {
 
 .container__carousel {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
   overflow: hidden;
+  margin: auto;
 }
 
 #slider__carousel {
@@ -44,7 +45,7 @@ button {
   transform: translateX(-100%);
 }
 #slider__carousel.slider__3d {
-  transform: translateX(-33.3333333333%);
+  transform: translateX(-66.6666666667%);
 }
 #slider__carousel .slide__carousel {
   display: flex;
@@ -56,10 +57,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: #e2dfd0;
+  overflow: hidden;
 }
 #slider__carousel .slide__carousel.slide__3d {
   position: relative;
   width: 33.3333333333%;
+  height: 317px;
+  border-radius: 20px;
 }
 #slider__carousel .slide__carousel img {
   width: 100%;

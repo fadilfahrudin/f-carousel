@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
     transform: translateX(-100%);
     &.slider__3d {
-        transform: translateX(calc(-100% / 3));
+        transform: translateX(calc(-100% / 1.5));
     }
     .slide__carousel {
         display: flex;
@@ -19,9 +19,12 @@
         height: $slide-height;
         background-color: $slide-bg-color;
 
+        overflow: hidden;
         &.slide__3d {
             position: relative;
             width: calc(100% / 3);
+            height: 317px;
+            border-radius: 20px;
         }
 
         img {
