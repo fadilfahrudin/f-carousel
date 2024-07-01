@@ -15,19 +15,19 @@ const slider3dShow = (i, slideRight) => {
     })
     $('.slide__3d').eq(i).css({
         'transform': 'scale(1.2)',
-        'z-index': 1,
+        'z-index': 3,
         'transition': 'transform 0.5s ease-in-out',
         'box-shadow': 'none'
     })
     $('.slide__3d').eq(i - 1).css({
         'transform': 'scale(1.1)',
-        'z-index': 1,
+        'z-index': 2,
         'transition': 'transform 0.5s ease-in-out',
         'box-shadow': 'none'
     })
     $('.slide__3d').eq(i + 1).css({
         'transform': 'scale(1.1)',
-        'z-index': 1,
+        'z-index': 2,
         'transition': 'transform 0.5s ease-in-out',
         'box-shadow': 'none'
     })
@@ -45,10 +45,11 @@ const slider3dShow = (i, slideRight) => {
     })
     $('.slide__3d').eq(slideRight ? i - 1 : i + 1).css({
         'transform': 'scale(1.3)',
-        'z-index': 2,
+        'z-index': 4,
         'transition': 'transform 0.5s ease-in-out',
         'box-shadow': '0px 10px 15px -3px rgba(0,0,0,0.1)'
     })
+
 }
 
 function handleGesture(e) {
@@ -103,10 +104,13 @@ const gestureSlider = () => {
                 const transformMatrix = $('#slider__carousel').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
                 initialTranslateX = transformMatrix[4] ? parseFloat(transformMatrix[4]) : 0;
                 offsetX = startX - initialTranslateX;
+                $(el).css("pointer-events", "fill");
             })
 
             $(el).mousemove((e) => {
                 if (!isDragging) return;
+                $(el).css("pointer-events", "fill");
+
                 currentX = e.pageX;
                 newX = e.clientX - offsetX;
 
