@@ -14,9 +14,15 @@ const actionObject = {
         isTransitioning = true;
         slideShow.move(slideShow.getIndex() + 1);
         setDot();
-        if (slideShow.getIndex() === slide.length + 1) {
+        if ($('#slider__carousel').attr('data-3d') === 'true' && slideShow.getIndex() === slide.length + 1) {
             setTimeout(() => {
                 slideShow.move(1, false)
+                setDot();
+                isTransitioning = false
+            }, 300)
+        } else if ($('#slider__carousel').attr('data-3d') === 'false' && slideShow.getIndex() === slide.length) {
+            setTimeout(() => {
+                slideShow.move(0, false)
                 setDot();
                 isTransitioning = false
             }, 300)
@@ -25,7 +31,6 @@ const actionObject = {
                 isTransitioning = false;
             }, 300);
         }
-
     },
     prevSlide: () => {
         if (isTransitioning) return;

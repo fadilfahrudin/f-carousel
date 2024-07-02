@@ -1,5 +1,5 @@
 let sliderElement = document.querySelector("#slider__carousel");
-let index = 1;
+let index = 0;
 let slideSize = $(".slide__carousel").css('width').replace('px', '');
 let slide3d;
 

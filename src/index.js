@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slideAuto && slideAuto === 'true') {
         setInterval(() => {
             action.nextSlide();
-        }, slideDuration | 3000)
+        }, slideDuration)
     }
 
     // click slide
