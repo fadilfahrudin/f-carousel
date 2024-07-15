@@ -22,8 +22,10 @@
         overflow: hidden;
         &.slide__3d {
             position: relative;
+            flex-shrink: 0;
             width: calc(100% / 3);
-            height: 317px;
+            // width: 425px;
+            height: 240px;
             border-radius: 20px;
         }
 
