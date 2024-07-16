@@ -1,0 +1,113 @@
+#carousel3d {
+    position: relative;
+    height: 320px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    .slide {
+        position: absolute;
+        transition:
+            transform 1s,
+            left 1s,
+            opacity 1s,
+            z-index 0s;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            width: 563px;
+            object-fit: cover;
+            object-position: center;
+            transition:
+                width 1s,
+                height 1s;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        &.selected {
+            z-index: 10;
+            left: 50%;
+            transform: translateY(0px) translateX(-50%);
+            height: 100%;
+            img {
+                height: 317px;
+            }
+        }
+
+        &.hideLeft {
+            left: 0%;
+            opacity: 0;
+            transform: translateY(-5%) translateX(50%);
+            height: 100%;
+            img {
+                width: 300px;
+                height: 150px;
+            }
+        }
+        &.hideRight {
+            left: 100%;
+            opacity: 0;
+            transform: translateY(-5%) translateX(-500px);
+            height: 100%;
+            img {
+                width: 300px;
+                height: 150px;
+            }
+        }
+        &.prev {
+            z-index: 5;
+            left: 30%;
+            transform: translateX(-50%);
+            height: 100%;
+            img {
+                width: 425px;
+                height: 239px;
+            }
+        }
+        &.next {
+            z-index: 5;
+            left: 70%;
+            transform: translateX(-50%);
+            height: 100%;
+            img {
+                width: 425px;
+                height: 239px;
+            }
+        }
+        &.prevLeftSecond {
+            z-index: 4;
+            left: 18%;
+            transform: translateX(-50%);
+            opacity: 0.7;
+            height: 100%;
+            img {
+                width: 337px;
+                height: 190px;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+        }
+        &.nextRightSecond {
+            z-index: 4;
+            left: 83%;
+            transform: translateX(-50%);
+            opacity: 0.7;
+            height: 100%;
+
+            img {
+                width: 337px;
+                height: 190px;
+                border-radius: 16px;
+                overflow: hidden;
+            }
+        }
+    }
+    .buttonsCarousel {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+    }
+}
